@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Question:2</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<script>
+
+    function array_fun()
+    {
+
+        var num = document.getElementById("num1").value;
+        var array_of_digits = [];
+        var rev=eval(0);
+        var i=eval(0);
+        var digit = eval(0); 
+
+        console.log(num);
+        console.log(typeof(num));
+
+        while(num>0)
+        {
+            digit=eval(num%10);
+            rev = eval(eval(rev)*10 )+ eval(digit);    
+            num=parseInt(num/10);
+            console.log(digit);
+
+        }
+        console.log(rev);
+
+        while(rev>0)
+         {
+            digit = rev%10;
+            array_of_digits[i]=parseInt(digit);
+            rev=parseInt(rev/10);
+            i=i+1;
+        }
+
+        document.write(array_of_digits);
+    }
+</script>
+
+
+<body>
+    
+        <label for="num1">Enter A Number</label>
+        <input type="number" name="" id="num1">
+        <button onclick="array_fun()">Go</button>
+
+</body>
+</html>

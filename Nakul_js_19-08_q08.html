@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+function fun()
+{
+    var input_string = document.getElementById("String").value;
+    //console.log(input_string)
+    
+    // var new_array = input_string.split("");
+    // new_array = new_array.sort();
+    // console.log(new_array);
+
+    for(var i =0;i<input_string.length;i++)
+    {
+     var c=input_string.charAt(i);
+     if(input_string.indexOf(c)==i && input_string.indexOf(c,i+1)==-1)
+     document.write(c + " is not repeating \n" );
+
+
+
+    }
+    
+    }
+
+
+
+</script>
+
+<body>
+    <label for="String"></label>
+    <input type="text" id="String">
+    <button onclick="fun()">Click me</button>
+</body>
+</html>

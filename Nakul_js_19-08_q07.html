@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+function Search()
+{
+
+    var main_string = document.getElementById("string").value;
+    var sub_string = document.getElementById("substring").value;
+    var temp_string = main_string.split(" ");
+    var count = 0;
+    sub = new RegExp(sub_string,"g");
+
+    console.log(sub);
+
+    // if(sub_string in temp_string)
+    // {
+    //     count++;
+    // }
+
+    
+            count = (main_string.match(sub)).length;
+                
+
+        
+
+        document.write("No of occurences is " + count);
+}
+</script>
+
+
+<body>
+    <label for="string">Enter the String</label>
+    <input type="text" id="string">
+    <br>
+    <label for="substring">Enter the Substring</label>
+    <input type="text" id="substring">
+
+    <button onclick="Search()">Search!!!</button>
+</body>
+</html>

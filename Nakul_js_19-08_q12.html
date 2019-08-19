@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script>
+function myfunc()
+{
+            var timetemp ="";
+            var zone="";
+            var date = new Date();
+            var dayname = new Array(7);
+            dayname[0] =  "Sunday";
+            dayname[1] = "Monday";
+            dayname[2] = "Tuesday";
+            dayname[3] = "Wednesday";
+            dayname[4] = "Thursday";
+            dayname[5] = "Friday";
+            dayname[6] = "Saturday";
+            
+            var temp = dayname[date.getDay()];
+            console.log(temp);
+            document.getElementById("message1").innerHTML=temp;
+
+            
+            var hour = date.getHours();
+            var min  = date.getMinutes();
+            var sec  = date.getSeconds();
+
+            if(hour>12)
+            {
+                hour = hour-12;
+                zone ="PM";
+            }
+            else
+                zone = "AM"
+
+                timetemp = hour +  ":" +min +":"+ sec +" "+zone;
+
+                console.log(timetemp);
+                document.getElementById("message2").innerHTML=timetemp;
+
+        }
+            
+            </script>
+
+</head>
+
+
+<body>
+    <h3 id="header1">Today:</h3>
+    <h3 id="message1"></h3>
+    <br>
+    <h3 id="header2">Time is:</h3>
+    <h3 id="message2"></h3>
+    <br>
+    <button id="Go!!!" onclick="myfunc()">GO</button>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Longest Word</title>
+</head>
+
+
+<script>
+
+function longest()
+{
+
+var source_string = document.getElementById("string1").value;
+var temp = source_string.split(" ");
+var length = 0;
+var k = 0;
+
+for(var i=0;i<temp.length;i++)
+{
+    if(temp[i].length>length)
+    {
+        length = temp[i].length;
+        k = i;
+    }
+        
+
+}
+document.write(temp[k]);
+}
+</script>
+<body>
+        <body>
+                <label for="string1">Enter your String here</label>
+                <input type="text" id="string1">
+                <button onclick="longest()">Find Longest word</button>
+        </body>
+</body>
+</html>

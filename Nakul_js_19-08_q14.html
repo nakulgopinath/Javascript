@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+
+function myfunc()
+{
+
+var string = document.getElementById("string1").value;
+var substring1 = document.getElementById("substring").value;
+var length = substring1.length;
+
+var temp = string.slice(0,length);
+
+console.log(temp);
+
+
+if(temp==substring1)
+document.write("It starts with same substring")
+else
+document.write("It does not start with the given substring");
+
+
+}
+
+</script>
+
+<body>
+    
+    <label for="string1">String:1</label>
+    <input type="text" id="string1">
+    <label for="substring">Substring:</label>
+    <input type="text" id="substring">
+    <button onclick="myfunc()">Click me</button>
+</body>
+</html>

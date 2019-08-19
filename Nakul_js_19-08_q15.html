@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<script>
+
+function bold()
+{
+    var temp = document.getElementsByTagName("b");
+
+for(var i=0;i<temp.length;i++)
+{
+    temp[i].style.backgroundColor= "blue";
+}
+
+}
+
+</script>
+
+
+</head>
+<body>
+    <p>
+        India is my country.All <b>Indians</b> are my <b>Brothers </b> and <b>Sisters</b> 
+    </p>
+
+    <button onclick="bold()">Go</button>
+</body>
+</html>
