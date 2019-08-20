@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Select Last Link</title>
+</head>
+
+<script>
+    function hyperlink()
+    
+    {
+
+    
+var no_of_links = document.links.length;
+var url = document.links[no_of_links-1].href;
+document.getElementById("link").innerHTML = url;
+}
+
+</script>
+
+<body>
+    <a href="https://www.google.com/">Google</a><br>
+    <a href="https://www.facebook.com/">Facebook</a><br>
+    <a href="http://www.youtube.com">Youtube</a>
+
+    <h2 id="link"></h2>
+
+    <button onclick="hyperlink()">Generate URL</button>
+</body>
+</html>

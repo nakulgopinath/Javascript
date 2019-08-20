@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Removing option from dropdown</title>
+</head>
+    <script>
+
+        function deleteall()
+        {
+
+            var input_data = document.getElementById("inputvalue").value;
+            var combobox = document.getElementById("combobox");
+            // console.log(typeof(combobox.options[0].value));
+            // console.log(typeof(input_data));
+
+            // console.log(combobox.options[0].value);
+            // console.log(input_data);
+            
+            
+            if (!combobox.options[0].value.localeCompare(input_data));
+                console.log("HIHI");
+            
+            for (var i=0; i<combobox.length; i++) 
+            {
+                if (combobox.options[i].value == input_data);
+                    {
+                    console.log("HIHI");
+                    combobox.remove(i);
+                    }
+                    
+           }
+
+  
+
+        }
+     </script>
+
+        <body>
+                <select id="combobox">
+                    <option>Europe</option>
+                    <option>Asia</option>
+                    <option>Africa</option>
+                    <option>Antartica</option>
+                  </select> 
+                  <br>
+                  <br>
+                  
+                  <label for="inputvalue"></label>
+                  <input type="text" id="inputvalue" name="" >
+                  <button onclick="deleteall()">Delete</button>
+            </body>
+    
+
+</html>

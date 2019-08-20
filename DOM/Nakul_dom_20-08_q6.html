@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic Input Box Creation</title>
+</head>
+
+<style>
+#newinput{
+    margin-top: -10px;
+}
+</style>
+
+<script>
+function read()
+{
+    var uinput      =   document.getElementById("userinput").value;
+    var newinput    =   document.getElementById("inputbox");
+    
+
+    uinput = parseInt(uinput);
+
+    console.log(typeof(uinput));
+
+    for(var i=0;i<uinput;i++)
+
+    {
+    
+    
+        var inputelement = document.createElement("input");
+        newinput.appendChild(inputelement);
+     
+     
+    //  document.write("\n");
+     
+}
+
+    }
+
+
+</script>
+<body>
+    <label for="userinput">Enter the Value</label>
+    <input type="number" id="userinput">
+
+    <button onclick="read()">Read</button>
+
+    <h3 id="inputbox"><br></h3>
+</body>
+</html>

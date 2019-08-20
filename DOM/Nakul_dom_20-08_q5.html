@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Disable Combobox</title>
+</head>
+<script>
+function turnoff(){
+    document.getElementById("combobox").disabled = true;
+}
+</script>
+<body>
+    <select id="combobox">
+        <option>Earth</option>
+        <option>Mars</option>
+        <option>Saturn</option>
+        <option>Jupiter</option>
+      </select> 
+      <br>
+      <br>
+
+      <button onclick="turnoff()">Click here to hide</button>
+</body>
+</html>
