@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Time Table</title>
+    <script src="Timetable.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <div>
+        <select id="classroomselect" onchange="renderTable()" >
+            <option value="Select Classroom"  >Select Classroom</option>
+            <option value="Classroom 1">Classroom 1</option>
+            <option value="Classroom 2">Classroom 2</option>
+            <option value="Classroom 3">Classroom 3</option>
+          </select> 
+    </div>
+
+
+   
+
+
+     <div id="timetable">
+<!-- 
+            <table class="table table-bordered table-responsive-md table-striped text-center" style="width: 750px" style="height:750px ">
+                    <thead>
+                      <tr>
+                        <th>DAY / TIME</th>
+                        <th class="text-center">MONDAY</th>
+                        <th class="text-center">TUESDAY</th>
+                        <th class="text-center">WEDNESDAY</th>
+                        <th class="text-center">THURSDAY</th>
+                        <th class="text-center">FRIDAY</th>
+                      </tr>
+            
+                      <tbody>
+                        <tr>
+                        <th class="text-center">10-11</th> 
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        </tr>
+            
+                        <tr>
+                        <th class="text-center">11-12</th> 
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        </tr>
+            
+                        <tr>
+                        <th class="text-center">12-01</th>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td> 
+                        </tr>
+            
+            
+                        <tr>
+                        <th class="text-center">01-02</th> 
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        </tr>
+            
+            
+                        <tr>
+                        <th class="text-center">02-03</th> 
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        <td class="pt-3-half" contenteditable="true"></td>
+                        </tr>
+            
+            
+                      </tbody>
+            
+                                                                
+                                                                 ${rows}
+               </table> -->
+
+
+                        
+
+    </div>
+
+    <div  id="trainerselectdiv" style="display: none" onchange="setTrainer()">
+            
+        <select  id="trainerselectdropdown">
+                    <option  value="Select Trainer"  >Select Trainer</option>
+                    <option id="1" value="Java">Mohsin</option>
+                    <option id="2" value="Javascript">Waleed</option>
+                    <option id="3" value="Neural Network">Pramod</option>
+            </select>
+            
+            <label for="subjectname">Subject Name:</label>
+            <input type="text" name="" id="subjectname">
+
+            <button onclick="saveTable()">Save Table</button>
+            <button onclick="viewinConsole()">View in console</button>
+    
+                  
+    </div> 
+
+    <!-- <div id="trainerselectdiv" style="display: none" onchange="setTrainer()" >
+        
+    </div> -->
+
+    
+
+</body>
+</html>
